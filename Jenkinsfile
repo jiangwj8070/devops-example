@@ -10,7 +10,7 @@ pipeline {
         stages {
                 stage('Build By Maven') {
                     steps {
-                        sh '''mvn clean package \'-Dmaven.test.skip\'
+                        sh '''mvn clean package -Dmaven.test.skip
                         mkdir docker/java
                         mv target/devops-example.jar docker/java/
                         mvn clean'''
